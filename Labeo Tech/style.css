@@ -1,0 +1,179 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #0D3B4C;
+    color: #fff;
+    margin: 0;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typing Animation */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+/* Logo */
+.logo-container img {
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect for Logo */
+.navbar .logo-container img:hover {
+    filter: brightness(1.2); /* Increase brightness when hovered */
+    transform: scale(1.05);  /* Slight scale-up effect */
+    cursor: pointer;
+}
+
+/* Active Effect for Logo (on Click) */
+.navbar .logo-container img:active {
+    filter: brightness(0.8); /* Darken the logo when clicked */
+    transform: scale(0.95); /* Slight scale-down effect */
+}
+
+/* Social Media Icons */
+.social-media a {
+    color: #fff;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #f2f2f2;
+}
+
+.fab {
+    font-size: 2rem;
+}
+
+/* Chatbot Styling */
+.chatbot-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    display: none;
+}
+
+/* Animations */
+.text-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.text-typing {
+    font-family: 'Courier New', Courier, monospace;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #fff;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Portfolio and Service Cards */
+.service-card,
+.portfolio-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.service-card:hover, .portfolio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Menu Styles */
+#mobile-menu {
+    display: none;
+}
+
+#mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#mobile-menu ul li {
+    padding: 15px;
+    background-color: #333;
+    border-bottom: 1px solid #444;
+}
+/* Footer Section */
+footer {
+    background-color: #1a202c;  /* Dark background */
+    padding: 2.5rem 0;          /* Padding for spacing */
+    text-align: center;
+    color: #fff;
+}
+
+/* Social Media Icons */
+.social-media a {
+    font-size: 2rem;            /* Size of the icons */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    margin: 0 1rem;             /* Spacing between icons */
+}
+
+.social-media a:hover {
+    transform: scale(1.1);      /* Slight zoom effect when hovered */
+}
+
+/* Specific Social Media Icon Colors */
+.facebook {
+    color: #3b5998; /* Facebook Blue */
+}
+
+.twitter {
+    color: #1DA1F2; /* Twitter Blue */
+}
+
+.linkedin {
+    color: #0077B5; /* LinkedIn Blue */
+}
+
+.github {
+    color: #333;    /* Default GitHub dark color */
+}
+
+/* Hover Effect for Specific Icons */
+.social-media .facebook:hover {
+    color: #3b5998; /* Facebook hover color */
+}
+
+.social-media .twitter:hover {
+    color: #1DA1F2; /* Twitter hover color */
+}
+
+.social-media .linkedin:hover {
+    color: #0077B5; /* LinkedIn hover color */
+}
+
+.social-media .github:hover {
+    color: #000;    /* GitHub hover color */
+}
